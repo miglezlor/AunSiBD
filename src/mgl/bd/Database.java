@@ -42,10 +42,10 @@ public class Database {
      * @return
      * @throws SQLException 
      */
-    public void insertar(String nombreTabla,String nombreColumna, String valores){
+    public void insertar(String nombreTabla, String valores){
         
         try {
-            PreparedStatement prepstat= conexion.prepareStatement("insert into "+nombreTabla+" ("+nombreColumna+") VALUES("+valores+")");
+            PreparedStatement prepstat= conexion.prepareStatement("insert into "+nombreTabla+" VALUES("+valores+")");
             prepstat.executeUpdate();
        
         } catch (SQLException ex) {
@@ -97,4 +97,8 @@ public class Database {
         }
         return visualizar;
     }
+    
+     public void cerrarConexion() throws SQLException{
+         conexion.close();
+     }
 }
