@@ -98,6 +98,9 @@ public class Database {
         return visualizar;
     }
     
+     /** Metodo para cerrar la conexion
+      * @throws SQLException 
+      */
      public void cerrarConexion() throws SQLException{
          conexion.close();
      }
