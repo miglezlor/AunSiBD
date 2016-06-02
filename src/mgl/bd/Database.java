@@ -101,7 +101,7 @@ public class Database {
      /** Metodo para cerrar la conexion
       * @throws SQLException 
       */
-     public void cerrarConexion() throws SQLException{
+    public void cerrarConexion() throws SQLException{
          conexion.close();
-     }
+    }
 }
